@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planets of Our Solar System</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, Helvetica;
+            margin: 0;
+            padding: 20px;
+            background: url("https://images.pexels.com/photos/631477/pexels-photo-631477.jpeg?cs=srgb&dl=pexels-neale-lasalle-197020-631477.jpg&fm=jpg");
+            color: #fff;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(8px);
+            border-radius: 20px;
+            padding: 10px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            background: linear-gradient(45deg, #85d0e7, #0b84e0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font: Helvetica;
+        }
+        
+        .subtitle {
+            text-align: center;
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        th, td {
+            padding: 15px 12px;
+            text-align: center;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        
+        th {
+            background: #000;
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9em;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        
+        td {
+            color: #333;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        tr:nth-child(even) {
+            background-color: rgba(0, 0, 0, 0.02);
+        }
+        
+        tr:hover {
+            background-color: rgba(102, 126, 234, 0.1);
+            transform: scale(1.01);
+        }
+        
+        .planet-name {
+            font-weight: 700;
+            font-size: 1.1em;
+            color: #2c3e50;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            text-align: left;
+        }
+        
+        .mercury { background-color: #FFC649; }
+        .venus { background-color: #FFC649; }
+        .earth { background-color: #6B93D6; }
+        .mars { background-color: #C1440E; }
+        .jupiter { background-color: #D8CA9D; }
+        .saturn { background-color: #FAD5A5; }
+        .uranus { background-color: #4FD0E7; }
+        .neptune { background-color: #4B70DD; }
+        
+        .planet-indicator {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 12px;
+            border: 2px solid #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            flex-shrink: 0;
+        }
+        
+        .distance {
+            font-family: 'Courier New', monospace;
+            font-weight: 600;
+        }
+        
+        .large-number {
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        
+        @media (max-width: 768px) {
+            table {
+                font-size: 0.8em;
+            }
+            
+            th, td {
+                padding: 8px 6px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .container {
+                padding: 15px;
+                margin: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Our Solar System</h1>
+        <p class="subtitle">A comprehensive guide to the eight planets orbiting our Sun</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Planet</th>
+                    <th>Distance from Sun<br>(Million km)</th>
+                    <th>Diameter<br>(km)</th>
+                    <th>Orbital Period<br>(Earth Days)</th>
+                    <th>Day Length<br>(Earth Hours)</th>
+                    <th>Moons</th>
+                    <th>Surface Temperature<br>(°C)</th>
+                    <th>Atmosphere</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="planet-name">
+                        <span class="planet-indicator mercury"></span>
+                        Mercury
+                    </td>
+                    <td class="distance">58</td>
+                    <td class="large-number">4,879</td>
+                    <td class="large-number">88</td>
+                    <td class="large-number">1,408</td>
+                    <td>0</td>
+                    <td>-173 to 427</td>
+                    <td>None (trace amounts)</td>
+                </tr>
+                <tr>
+                    <td class="planet-name">
+                        <span class="planet-indicator venus"></span>
+                        Venus
+                    </td>
+                    <td class="distance">108</td>
+                    <td class="large-number">12,104</td>
+                    <td class="large-number">225</td>
+                    <td class="large-number">5,832</td>
+                    <td>0</td>
+                    <td>462</td>
+                    <td>96% CO₂, 3.5% N₂</td>
+                </tr>
+                <tr>
+                    <td class="planet-name">
+                        <span class="planet-indicator earth"></span>
+                        Earth
+                    </td>
+                    <td class="distance">150</td>
+                    <td class="large-number">12,756</td>
+                    <td class="large-number">365</td>
+                    <td class="large-number">24</td>
+                    <td>1</td>
+                    <td>-89 to 58</td>
+                    <td>78% N₂, 21% O₂</td>
+                </tr>
+                <tr>
+                    <td class="planet-name">
+                        <span class="planet-indicator mars"></span>
+                        Mars
+                    </td>
+                    <td class="distance">228</td>
+                    <td class="large-number">6,792</td>
+                    <td class="large-number">687</td>
+                    <td class="large-number">25</td>
+                    <td>2</td>
+                    <td>-87 to -5</td>
+                    <td>95% CO₂, 3% N₂</td>
+                </tr>
+                <tr>
+                    <td class="planet-name">
+                        <span class="planet-indicator jupiter"></span>
+                        Jupiter
+                    </td>
+                    <td class="distance">778</td>
+                    <td class="large-number">142,984</td>
+                    <td class="large-number">4,333</td>
+                    <td class="large-number">10</td>
+                    <td>95</td>
+                    <td>-108</td>
+                    <td>89% H₂, 10% He</td>
+                </tr>
+                <tr>
+                    <td class="planet-name">
+                        <span class="planet-indicator saturn"></span>
+                        Saturn
+                    </td>
+                    <td class="distance">1,432</td>
+                    <td class="large-number">120,536</td>
+                    <td class="large-number">10,759</td>
+                    <td class="large-number">11</td>
+                    <td>146</td>
+                    <td>-139</td>
+                    <td>96% H₂, 3% He</td>
+                </tr>
+                <tr>
+                    <td class="planet-name">
+                        <span class="planet-indicator uranus"></span>
+                        Uranus
+                    </td>
+                    <td class="distance">2,867</td>
+                    <td class="large-number">51,118</td>
+                    <td class="large-number">30,687</td>
+                    <td class="large-number">17</td>
+                    <td>27</td>
+                    <td>-197</td>
+                    <td>83% H₂, 15% He, 2% CH₄</td>
+                </tr>
+                <tr>
+                    <td class="planet-name">
+                        <span class="planet-indicator neptune"></span>
+                        Neptune
+                    </td>
+                    <td class="distance">4,515</td>
+                    <td class="large-number">49,528</td>
+                    <td class="large-number">60,190</td>
+                    <td class="large-number">16</td>
+                    <td>16</td>
+                    <td>-201</td>
+                    <td>80% H₂, 19% He, 1% CH₄</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
